@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>rbce</title>
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById("myModal");
+    const openModalBtn = document.getElementsByClassName("openModalBtn");
+    const closeBtn = document.getElementsByClassName("closeBtn")[0];
+
+    openModalBtn[0].onclick = function () {
+      modal.style.display = "block";
+    }
+
+    openModalBtn[1].onclick = function () {
+      modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    document.getElementById("name").value = '';
+    document.getElementById("email").value = '';
+    document.getElementById("message").value = '';
+
+    alert("Mensagem enviada com sucesso")
+
+    document.getElementById("myModal").style.display = "none";
+
+
+  }
+
+</script>
+
+<body>
+  <header><svg id="logo" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="24.7939" y="12.0614" width="18.8092" height="6.89231" fill="#9BD9A9" />
+      <rect x="30.7787" y="24.9845" width="18.9538" height="6.83969" transform="rotate(-90 30.7787 24.9845)"
+        fill="#9BD9A9" />
+      <rect x="18.3817" y="24.9844" width="18.8092" height="6.89231" fill="#F3FE6B" />
+      <rect x="24.3665" y="37.9075" width="18.9538" height="6.83969" transform="rotate(-90 24.3665 37.9075)"
+        fill="#F3FE6B" />
+      <rect x="5.98474" y="18.0923" width="18.8092" height="6.89231" fill="#9BD9A9" />
+      <rect x="11.9695" y="31.0154" width="18.9538" height="6.83969" transform="rotate(-90 11.9695 31.0154)"
+        fill="#9BD9A9" />
+      <rect y="31.0156" width="18.8092" height="6.89231" fill="#4CBF6C" />
+      <rect x="5.98474" y="43.9387" width="18.9538" height="6.83969" transform="rotate(-90 5.98474 43.9387)"
+        fill="#4CBF6C" />
+      <rect x="11.9695" y="6.03076" width="18.8092" height="6.89231" fill="#4CBF6C" />
+      <rect x="17.9541" y="18.9537" width="18.9538" height="6.83969" transform="rotate(-90 17.9541 18.9537)"
+        fill="#4CBF6C" />
+      <rect x="31.2061" y="31.0156" width="18.8092" height="6.89231" fill="#4CBF6C" />
+      <rect x="37.1908" y="43.9387" width="18.9538" height="6.83969" transform="rotate(-90 37.1908 43.9387)"
+        fill="#4CBF6C" />
+      <rect x="37.1908" y="18.0923" width="18.8092" height="6.89231" fill="#70CB86" />
+      <rect x="43.1757" y="31.0154" width="18.9538" height="6.83969" transform="rotate(-90 43.1757 31.0154)"
+        fill="#70CB86" />
+      <rect x="12.397" y="37.0461" width="18.8092" height="6.89231" fill="#70CB86" />
+      <rect x="18.3817" y="49.9691" width="18.9538" height="6.83969" transform="rotate(-90 18.3817 49.9691)"
+        fill="#70CB86" />
+      <rect x="25.2213" y="43.077" width="18.8092" height="6.89231" fill="#9BD9A9" />
+      <rect x="31.2061" y="56.0001" width="18.9538" height="6.83969" transform="rotate(-90 31.2061 56.0001)"
+        fill="#9BD9A9" />
+    </svg>
+    <h1><a href="index.html">rbce <span>Rede brasileira de cooperação em emergências</span></a></h1>
+    <nav>
+      <ul>
+        <li class="openModalBtn"><a href="#">contato</a></li>
+        <li><a href="about.html">quem somos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="carousel">
+      <button id="forward"></button>
+      <button id="backward"></button>
+    </section>
+    <section id="projects-bg">
+      <article class="content" id="projects-content">
+        <h3>projetos</h3>
+        <div id="teste">
+          <div>
+            <p>IMAGEM</p><img
+              src="https://www.grupoboticario.com.br/wp-content/uploads/2024/05/neurolab-dr-miguel-500x280.png"
+              alt="projeto 1">
+          </div>
+          <div>
+            <p>IMAGEM 2</p><img
+              src="https://www.grupoboticario.com.br/wp-content/uploads/2024/06/Compromissos-para-o-futuro-Grupo-Boticario-Relatorio-ESG-500x280.jpg"
+              alt="projeto 2">
+          </div>
+          <div>
+            <p>IMAGEM 3</p><img
+              src="https://www.grupoboticario.com.br/wp-content/uploads/2022/05/diversidadeinterna4-185x185.jpg"
+              alt="projeto 3">
+          </div>
+
+        </div>
+      </article>
+    </section>
+    <article class="content" id="data-content">
+      <h3>alguns dados importantes</h3>
+      <div>
+        <div class="teste">
+          <svg width="96px" height="96px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                stroke="#00923E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #66ffa7;"></path>
+            </g>
+          </svg>
+          <div class="data-conteiner">
+            <h4>Meta 4x4:</h4>
+            <p>Estabelecemos um tempo máximo de 4 a 8 horas de permanência nos serviços de urgência, garantindo
+              diagnósticos rápidos e início eficaz de tratamentos.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="teste">
+          <svg fill="#00923E" height="96" width="96" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 451.731 451.731" xml:space="preserve"
+            data-darkreader-inline-fill="" style="--darkreader-inline-fill: #007532;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g id="XMLID_103_">
+                  <path id="XMLID_105_"
+                    d="M433.672,326.154H177.59c-15.148,0-27.537-11.877-28.081-27.101c-0.322-9.026-0.178-17.876,0.436-26.702 h-12.401c-3.988-2.034-105.11-53.61-112.544-57.401V104.147c0-6.904-5.596-12.5-12.5-12.5S0,97.243,0,104.147 c0,3.942,0,220.241,0,228.007c0,6.903,5.597,12.5,12.5,12.5h21.786v7.325c0,4.476,3.628,8.104,8.104,8.104h40.652 c4.476,0,8.104-3.628,8.104-8.104v-7.325h272.08v7.325c0,4.476,3.628,8.104,8.104,8.104h40.652c4.476,0,8.104-3.628,8.104-8.104 v-7.325h19.145c6.903,0,12.5-5.597,12.5-12.5v-12.531C446.829,323.727,440.519,326.154,433.672,326.154z">
+                  </path>
+                  <circle id="XMLID_914_" cx="85.551" cy="180.9" r="33.403"></circle>
+                  <path id="XMLID_924_"
+                    d="M132.381,244.115c19.049,7.106,7.955,2.968,19.927,7.434c1.305-8.176,2.98-15.83,4.91-22.958 l-4.474-6.954l48.668,47.045c3.773,3.648,9.286,5.332,14.654,4.155l62.898-13.791c8.678-1.903,14.201-10.485,12.292-19.195 c0-0.002-0.001-0.004-0.002-0.006c-1.861-8.476-10.318-14.207-19.157-12.292c-0.012,0.003-0.024,0.003-0.037,0.006l-54.457,11.94 l0,0c-5.046-4.878-42.21-40.802-47.45-45.867c4.284-8.919,8.642-16.224,12.446-21.9l-20.381-7.603 c-11.864-4.426-24.757,1.807-29.027,13.252c0,0.001-0.001,0.002-0.001,0.002l-14.065,37.703c-0.001,0.004-0.002,0.007-0.004,0.011 C114.82,226.644,120.62,239.727,132.381,244.115z">
+                  </path>
+                  <path id="XMLID_927_"
+                    d="M268.748,212.447c17.364-3.807,33.994,7.54,37.622,24.091c3.72,16.967-6.993,33.875-24.091,37.622 l-62.898,13.791c-14.503,3.18-26.96-4.651-30.98-10.896l-15.946-24.783c-2.342,13.657-3.568,29.016-2.959,46.068 c0.156,4.358,3.732,7.815,8.094,7.815h256.082c3.974,0,7.361-2.881,7.999-6.803l6.24-38.379 c4.691-28.854-12.886-56.527-40.972-64.635c-43.8-12.644-109.12-28.424-162.308-28.424c-12.985,0-25.237,0.939-36.288,3.094 c0,0-10.954,11.253-21.251,33.532l32.966,18.582L268.748,212.447z">
+                  </path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="data-conteiner">
+            <h4>Expansão de Leitos Hospitalares:</h4>
+            <p>Ampliamos a oferta de leitos hospitalares, alcançando 4 leitos de internação para cada mil habitantes,
+              melhorando o acesso ao atendimento hospitalar de qualidade.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="teste">
+          <svg width="96" viewBox="0 0 48.00 48.00" xmlns="http://www.w3.org/2000/svg" fill="#00923E"
+            style="--darkreader-inline-fill: #007532; --darkreader-inline-stroke: #66ffa7;" stroke="#00923E"
+            data-darkreader-inline-fill="" data-darkreader-inline-stroke="" stroke-width="0.00048000000000000007">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="invisible_box" data-name="invisible box">
+                  <rect width="48" height="48" fill="none"></rect>
+                </g>
+                <g id="Layer_4" data-name="Layer 4">
+                  <g>
+                    <circle cx="35" cy="22" r="6"></circle>
+                    <path
+                      d="M45.2,33.3a17.4,17.4,0,0,0-20.4,0,1.6,1.6,0,0,0-.8,1.4v5.8A1.6,1.6,0,0,0,25.6,42H44.4A1.6,1.6,0,0,0,46,40.5V34.7A1.6,1.6,0,0,0,45.2,33.3Z">
+                    </path>
+                    <path
+                      d="M26,9H22V4H6V9H2V40a2,2,0,0,0,2,2H20V34.7A5.6,5.6,0,0,1,22.5,30,24.3,24.3,0,0,1,26,28ZM13,34H9V30h4Zm0-6H9V24h4Zm0-6H9V18h4Zm1-6a1,1,0,0,1-1-1V13H11a1,1,0,0,1,0-2h2V9a1,1,0,0,1,2,0v2h2a1,1,0,0,1,0,2H15v2A1,1,0,0,1,14,16Zm5,18H15V30h4Zm0-6H15V24h4Zm0-6H15V18h4Z">
+                    </path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="data-conteiner">
+            <h4>Capacitação de Profissionais:</h4>
+            <p>Capacitamos mais de 10.000 profissionais de saúde em práticas de atendimento de urgência e emergência,
+              elevando o padrão de cuidado e eficiência no SUS.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="teste">
+          <svg width="96" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000"
+            data-darkreader-inline-fill="" style="--darkreader-inline-fill: #000000;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill="#00923E"
+                d="M256 102L20 256l236 154 236-154-236-154zm0 54a100 100 0 0 1 100 100 100 100 0 0 1-.504 10.014c-48.123-36.173-110.506-57.542-168.914-56.409-6.632.13-13.207.566-19.709 1.286A100 100 0 0 1 256 156zm-65.568 71.73c55.59.133 116.403 22.059 161.045 57.979A100 100 0 0 1 256 356a100 100 0 0 1-100-100 100 100 0 0 1 3.545-25.943c10.012-1.593 20.354-2.352 30.887-2.327z"
+                style="--darkreader-inline-fill: #007532;" data-darkreader-inline-fill=""></path>
+            </g>
+          </svg>
+          <div class="data-conteiner">
+            <h4>Coalizão Nacional:</h4>
+            <p>Estabelecemos uma coalizão para assegurar tempos de espera clinicamente aceitáveis para diagnósticos e
+              tratamentos, promovendo equidade no acesso e melhores resultados clínicos.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <form action="" onsubmit="handleSubmit(event)">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required placeholder="João">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="joao@email.com">
+          <label for="message">Mensagem:</label>
+          <textarea name="message" id="message" cols="30" rows="10" required placeholder="Sua mensagem..."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="first-div">
+      <ul>
+        <li id="footer-logo">rbce</li>
+        <li class="openModalBtn"><a href="#first-div">contato</a></li>
+        <li><a href="about.html">quem somos</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.facebook.com/" target="_blank"><svg width="30" height="30" viewBox="0 0 40 40"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 0.5C16.1433 0.5 12.3731 1.64366 9.16639 3.78634C5.95963 5.92903 3.46027 8.97451 1.98436 12.5377C0.508449 16.1008 0.122284 20.0216 0.874696 23.8043C1.62711 27.5869 3.4843 31.0615 6.21143 33.7886C8.93855 36.5157 12.4131 38.3729 16.1957 39.1253C19.9784 39.8777 23.8992 39.4916 27.4623 38.0156C31.0255 36.5397 34.071 34.0404 36.2137 30.8336C38.3564 27.6269 39.5 23.8567 39.5 20C39.4945 14.83 37.4383 9.87322 33.7826 6.21745C30.1268 2.56167 25.1901 0.50546 20 0.5ZM21.5 36.4306V24.5H26C26.3978 24.5 26.7794 24.342 27.0607 24.0607C27.342 23.7794 27.5 23.3978 27.5 23C27.5 22.6022 27.342 22.2206 27.0607 21.9393C26.7794 21.658 26.3978 21.5 26 21.5H21.5V17C21.5 16.2044 21.8161 15.4413 22.3787 14.8787C22.9413 14.3161 23.7044 14 24.5 14H27.5C27.8978 14 28.2794 13.842 28.5607 13.5607C28.842 13.2794 29 12.8978 29 12.5C29 12.1022 28.842 11.7206 28.5607 11.4393C28.2794 11.158 27.8978 11 27.5 11H24.5C22.9087 11 21.3826 11.6321 20.2574 12.7574C19.1322 13.8826 18.5 15.4087 18.5 17V21.5H14C13.6022 21.5 13.2207 21.658 12.9393 21.9393C12.658 22.2206 12.5 22.6022 12.5 23C12.5 23.3978 12.658 23.7794 12.9393 24.0607C13.2207 24.342 13.6022 24.5 14 24.5H18.5V36.4306C14.2715 36.0446 10.3546 34.0433 7.56395 30.8431C4.77334 27.6428 3.32389 23.4899 3.5171 19.2482C3.7103 15.0065 5.53129 11.0025 8.60128 8.0692C11.6713 5.13586 15.7539 3.49895 20 3.49895C24.2461 3.49895 28.3288 5.13586 31.3987 8.0692C34.4687 11.0025 36.2897 15.0065 36.4829 19.2482C36.6761 23.4899 35.2267 27.6428 32.4361 30.8431C29.6455 34.0433 25.7285 36.0446 21.5 36.4306Z"
+                fill="white" />
+            </svg>
+          </a></li>
+        <li><a href="https://www.youtube.com/" target="_blank"><svg width="32" height="28" viewBox="0 0 42 34"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M27.8325 15.7513L18.8325 9.75126C18.6065 9.6005 18.3439 9.51394 18.0726 9.50079C17.8013 9.48765 17.5315 9.54842 17.292 9.67662C17.0526 9.80483 16.8524 9.99565 16.7129 10.2287C16.5734 10.4618 16.4998 10.7284 16.5 11V23C16.4998 23.2716 16.5734 23.5382 16.7129 23.7713C16.8524 24.0044 17.0526 24.1952 17.292 24.3234C17.5315 24.4516 17.8013 24.5124 18.0726 24.4992C18.3439 24.4861 18.6065 24.3995 18.8325 24.2488L27.8325 18.2488C28.0383 18.1118 28.207 17.9262 28.3237 17.7083C28.4404 17.4905 28.5015 17.2472 28.5015 17C28.5015 16.7529 28.4404 16.5095 28.3237 16.2917C28.207 16.0738 28.0383 15.8882 27.8325 15.7513ZM19.5 20.1969V13.8125L24.2962 17L19.5 20.1969ZM40.9369 6.03501C40.7602 5.34378 40.4217 4.70447 39.9493 4.16982C39.4769 3.63516 38.8842 3.22049 38.22 2.96001C31.7925 0.477507 21.5625 0.500007 21 0.500007C20.4375 0.500007 10.2075 0.477507 3.78 2.96001C3.11581 3.22049 2.52306 3.63516 2.05068 4.16982C1.57829 4.70447 1.2398 5.34378 1.06313 6.03501C0.5775 7.90626 0 11.3263 0 17C0 22.6738 0.5775 26.0938 1.06313 27.965C1.23953 28.6566 1.57791 29.2963 2.05031 29.8313C2.52271 30.3663 3.11559 30.7812 3.78 31.0419C9.9375 33.4175 19.575 33.5 20.8762 33.5H21.1238C22.425 33.5 32.0681 33.4175 38.22 31.0419C38.8844 30.7812 39.4773 30.3663 39.9497 29.8313C40.4221 29.2963 40.7605 28.6566 40.9369 27.965C41.4225 26.09 42 22.6738 42 17C42 11.3263 41.4225 7.90626 40.9369 6.03501ZM38.0325 27.2225C37.9754 27.4526 37.8645 27.6658 37.709 27.8447C37.5536 28.0236 37.3579 28.1632 37.1381 28.2519C31.2038 30.5431 21.1106 30.5019 21.0131 30.5019H21C20.8988 30.5019 10.8131 30.5394 4.875 28.2519C4.65519 28.1632 4.45954 28.0236 4.30408 27.8447C4.14861 27.6658 4.03777 27.4526 3.98062 27.2225C3.525 25.5106 3 22.3569 3 17C3 11.6431 3.525 8.48938 3.9675 6.78688C4.02358 6.55547 4.13395 6.34074 4.28947 6.16043C4.44499 5.98013 4.6412 5.83945 4.86188 5.75001C10.5844 3.53938 20.1731 3.50001 20.9587 3.50001H21.0094C21.1106 3.50001 31.2056 3.46626 37.1344 5.75001C37.3542 5.83872 37.5498 5.97826 37.7053 6.15719C37.8608 6.33612 37.9716 6.54934 38.0288 6.77938C38.475 8.48938 39 11.6431 39 17C39 22.3569 38.475 25.5106 38.0325 27.2131V27.2225Z"
+                fill="white" />
+            </svg>
+          </a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><svg width="30" height="30" viewBox="0 0 40 40"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 11C18.22 11 16.4799 11.5278 14.9999 12.5168C13.5198 13.5057 12.3663 14.9113 11.6851 16.5558C11.0039 18.2004 10.8257 20.01 11.1729 21.7558C11.5202 23.5016 12.3774 25.1053 13.636 26.364C14.8947 27.6226 16.4984 28.4798 18.2442 28.8271C19.99 29.1743 21.7996 28.9961 23.4442 28.3149C25.0887 27.6337 26.4943 26.4802 27.4832 25.0001C28.4722 23.5201 29 21.78 29 20C28.9975 17.6138 28.0485 15.3261 26.3612 13.6388C24.6739 11.9515 22.3862 11.0025 20 11ZM20 26C18.8133 26 17.6533 25.6481 16.6666 24.9888C15.6799 24.3295 14.9108 23.3925 14.4567 22.2961C14.0026 21.1997 13.8838 19.9933 14.1153 18.8295C14.3468 17.6656 14.9182 16.5965 15.7574 15.7574C16.5965 14.9182 17.6656 14.3468 18.8295 14.1153C19.9933 13.8838 21.1997 14.0026 22.2961 14.4567C23.3925 14.9108 24.3295 15.6799 24.9888 16.6666C25.6481 17.6533 26 18.8133 26 20C26 21.5913 25.3679 23.1174 24.2426 24.2426C23.1174 25.3679 21.5913 26 20 26ZM29 0.5H11C8.21614 0.502978 5.54715 1.61018 3.57867 3.57867C1.61018 5.54715 0.502978 8.21614 0.5 11V29C0.502978 31.7839 1.61018 34.4528 3.57867 36.4213C5.54715 38.3898 8.21614 39.497 11 39.5H29C31.7839 39.497 34.4528 38.3898 36.4213 36.4213C38.3898 34.4528 39.497 31.7839 39.5 29V11C39.497 8.21614 38.3898 5.54715 36.4213 3.57867C34.4528 1.61018 31.7839 0.502978 29 0.5ZM36.5 29C36.5 30.9891 35.7098 32.8968 34.3033 34.3033C32.8968 35.7098 30.9891 36.5 29 36.5H11C9.01088 36.5 7.10322 35.7098 5.6967 34.3033C4.29018 32.8968 3.5 30.9891 3.5 29V11C3.5 9.01088 4.29018 7.10322 5.6967 5.6967C7.10322 4.29018 9.01088 3.5 11 3.5H29C30.9891 3.5 32.8968 4.29018 34.3033 5.6967C35.7098 7.10322 36.5 9.01088 36.5 11V29ZM32 10.25C32 10.695 31.868 11.13 31.6208 11.5C31.3736 11.87 31.0222 12.1584 30.611 12.3287C30.1999 12.499 29.7475 12.5436 29.311 12.4568C28.8746 12.37 28.4737 12.1557 28.159 11.841C27.8443 11.5263 27.63 11.1254 27.5432 10.689C27.4564 10.2525 27.501 9.8001 27.6713 9.38896C27.8416 8.97783 28.13 8.62643 28.5 8.37919C28.87 8.13196 29.305 8 29.75 8C30.3467 8 30.919 8.23705 31.341 8.65901C31.7629 9.08097 32 9.65326 32 10.25Z"
+                fill="white" />
+            </svg>
+          </a></li>
+      </ul>
+    </div>
+    <div id="second-div">
+      <p>copyright @ rbce 2024</p>
+      <p id="text">desenvolvido por <a href="https://github.com/samueldeotti" target="_blank"
+          rel="noopener noreferrer">samuel</a></p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
